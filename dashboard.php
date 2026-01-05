@@ -44,9 +44,13 @@ if (!isset($_SESSION['user'])) {
           </a>
 
           <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-link text-premium p-0" id="themeToggleNav">
-              <i class="bi bi-moon-stars-fill fs-5" id="themeIconNav"></i>
+            
+            <button class="btn btn-link text-premium p-0 rounded-circle d-flex align-items-center justify-content-center bg-white bg-opacity-10" 
+                    id="themeToggleNav" 
+                    style="width: 40px; height: 40px; text-decoration: none;">
+              <i class="bi bi-circle-half fs-5" id="themeIconNav"></i>
             </button>
+
             <div class="dropdown">
               <a href="#" class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown">
                 <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['user']['name']; ?>&background=c5a059&color=fff" alt="user" width="35" class="rounded-circle border border-1 border-premium"/>
@@ -99,8 +103,9 @@ if (!isset($_SESSION['user'])) {
       <main class="main-content d-flex flex-column p-3 p-md-4 p-lg-5">
         <div class="flex-grow-1">
           <div id="section-dashboard" class="content-section fade-in">
-            <h2 class="fw-bold mb-4">Dashboard</h2>
-            <div class="row g-3 g-xl-4 mb-4">
+            <h2 class="fw-bold mb-5">Dashboard</h2>
+            
+            <div class="row g-3 g-xl-4 mb-5">
               <div class="col-12 col-sm-6 col-xl-3">
                 <div class="card stat-card p-3 p-xl-4 border-0 shadow-sm h-100">
                   <span class="text-muted small text-uppercase fw-bold">Projets</span>
@@ -127,7 +132,7 @@ if (!isset($_SESSION['user'])) {
               </div>
             </div>
 
-            <div class="card border-0 shadow-sm p-4 mb-4">
+            <div class="card border-0 shadow-sm p-4 mb-5">
                <div class="d-flex justify-content-between align-items-center mb-4">
                    <div>
                        <h6 class="fw-bold mb-1">Analyse de la Charge</h6>
@@ -140,7 +145,7 @@ if (!isset($_SESSION['user'])) {
                </div>
             </div>
 
-            <div class="row mb-4">
+            <div class="row mb-5">
               <div class="col-lg-8 mb-4 mb-lg-0">
                  <div class="card border-0 shadow-sm p-4 h-100">
                     <h6 class="fw-bold mb-4">Répartition (Statut)</h6>
@@ -149,17 +154,50 @@ if (!isset($_SESSION['user'])) {
                     </div>
                  </div>
               </div>
+              
               <div class="col-lg-4">
-                 <div class="card border-0 shadow-sm p-4 h-100 bg-black text-white">
-                    <h5 class="fw-bold mb-3 text-premium">Statut Global</h5>
-                    <p class="text-white-50 small">Avancement moyen de tous les projets actifs.</p>
-                    <div class="mt-auto">
-                        <div class="d-flex justify-content-between align-items-end mb-2">
-                           <span class="fw-bold display-4" id="globalProgressDisplay">0%</span>
-                           <i class="bi bi-bar-chart-fill fs-1 text-premium"></i>
+                 <div class="card border-0 shadow-sm p-4 h-100 bg-black text-white d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-premium">Performance</h5>
+                            <p class="text-white-50 small mb-0">Moyenne globale des projets.</p>
                         </div>
-                        <div class="progress bg-white bg-opacity-10" style="height: 8px;">
+                        <i class="bi bi-activity fs-4 text-premium"></i>
+                    </div>
+
+                    <div class="my-auto py-3">
+                        <div class="d-flex justify-content-between align-items-end mb-2">
+                           <span class="fw-bold display-3" id="globalProgressDisplay">0%</span>
+                        </div>
+                        <div class="progress bg-white bg-opacity-10 mb-2" style="height: 6px;">
                            <div class="progress-bar bg-premium" id="globalProgressBar" style="width: 0%"></div>
+                        </div>
+                        <small class="text-white-50">Basé sur l'ensemble des tâches actives.</small>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-top border-secondary border-opacity-50">
+                        <div class="row text-center g-2">
+                            <div class="col-4">
+                                <div class="p-2 rounded-3 bg-white bg-opacity-10 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                                    <i class="bi bi-graph-up-arrow text-success mb-2 fs-5 d-block"></i>
+                                    <span class="small fw-bold d-block text-white mb-1">Positive</span>
+                                    <span class="text-white-50" style="font-size: 10px; letter-spacing: 0.5px;">TENDANCE</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded-3 bg-white bg-opacity-10 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                                    <i class="bi bi-lightning-charge-fill text-premium mb-2 fs-5 d-block"></i>
+                                    <span class="small fw-bold d-block text-white mb-1">Stable</span>
+                                    <span class="text-white-50" style="font-size: 10px; letter-spacing: 0.5px;">VÉLOCITÉ</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded-3 bg-white bg-opacity-10 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                                    <i class="bi bi-shield-check-fill text-info mb-2 fs-5 d-block"></i>
+                                    <span class="small fw-bold d-block text-white mb-1">Faible</span>
+                                    <span class="text-white-50" style="font-size: 10px; letter-spacing: 0.5px;">RISQUE</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                  </div>
@@ -168,21 +206,24 @@ if (!isset($_SESSION['user'])) {
 
             <div class="card border-0 shadow-sm p-3 p-lg-4">
               <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
-                <h6 class="fw-bold mb-0">Tâches Récentes</h6>
-                <div class="d-flex flex-column flex-sm-row gap-2 w-100 w-md-auto">
-                  <div class="input-group">
+                <h6 class="fw-bold mb-0 text-nowrap">Tâches Récentes</h6>
+                
+                <div class="d-flex flex-column flex-sm-row gap-2 w-100 flex-md-grow-1 ms-md-4">
+                  <div class="input-group flex-grow-1">
                     <span class="input-group-text bg-body-tertiary border-end-0 ps-3 rounded-start-pill">
                       <i class="bi bi-search text-muted"></i>
                     </span>
                     <input type="text" id="taskSearch" class="form-control bg-body-tertiary border-start-0 rounded-end-pill" placeholder="Chercher..." />
                   </div>
-                  <select id="priorityFilter" class="form-select rounded-pill bg-body-tertiary">
+                  
+                  <select id="priorityFilter" class="form-select rounded-pill bg-body-tertiary w-auto" style="min-width: 170px;">
                     <option value="all">Priorité (Tout)</option>
                     <option value="Haute">Haute</option>
                     <option value="Moyenne">Moyenne</option>
                     <option value="Urgent">Urgent</option>
                     <option value="Basse">Basse</option>
                   </select>
+                  
                   <button class="btn btn-primary rounded-pill px-3" onclick="window.openNewTask()">
                     <i class="bi bi-plus-lg"></i>
                   </button>
@@ -295,7 +336,7 @@ if (!isset($_SESSION['user'])) {
         <footer class="main-footer mt-5 pt-4 border-top">
           <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
             <div class="text-muted small">
-              © 2024 <span class="fw-bold text-premium">STUDIO</span>ONYX. Tous droits réservés.
+              © <?php echo date('Y'); ?> <span class="fw-bold text-premium">STUDIO</span>ONYX. Tous droits réservés.
             </div>
             <ul class="list-inline mb-0 small">
               <li class="list-inline-item">
