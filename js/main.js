@@ -1,4 +1,3 @@
-// js/main.js
 import * as API from "./api.js";
 import * as UI from "./ui.js";
 import * as Utils from "./utils.js";
@@ -28,7 +27,6 @@ async function loadData() {
     refreshUI();
   } catch (e) {
     Utils.showToast("Erreur de chargement (Mode hors ligne)", "danger");
-    // Données par défaut si erreur
     state.projects = [
       {
         id: 1,
@@ -48,7 +46,6 @@ async function loadData() {
 async function syncData() {
   try {
     await API.saveDataToServer(state.projects, state.tasks);
-    // On ne recharge pas tout pour garder la fluidité, mais on notifie
   } catch (e) {
     Utils.showToast("Erreur de sauvegarde", "danger");
   }
@@ -293,7 +290,7 @@ function setupTheme() {
     if (switchEl) switchEl.checked = theme === "dark";
     document.getElementById("themeIconNav").className =
       theme === "dark" ? "bi bi-sun-fill" : "bi bi-moon-stars-fill";
-    refreshUI(); // Pour les charts
+    refreshUI();
   };
 
   apply(currentTheme);
@@ -322,7 +319,7 @@ function setupNavigation() {
 
       const target = document.getElementById(this.getAttribute("data-section"));
       target.classList.remove("d-none");
-      void target.offsetWidth; // Trigger reflow
+      void target.offsetWidth; 
       target.classList.add("fade-in");
 
       // Fermeture mobile

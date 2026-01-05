@@ -1,1 +1,128 @@
-{"projects":[{"id":1766600359053,"title":"VOYAGE AU KENTUCKY","desc":"VOYAGE DE FIN D'ANNEE","img":"https://picsum.photos/500/300?random=0.8700545403561317","dueDate":"2026-06-29","budget":17000},{"id":1766577993456,"title":"iouyugiyfutdfygiuhoij","desc":"poijohu","img":"https://picsum.photos/500/300?random=0.18482931929643887","dueDate":"2025-12-28","budget":4500},{"id":1766577975933,"title":"$ôpîopiofy","desc":"^p^loigh","img":"https://picsum.photos/500/300?random=0.2196234886448526","dueDate":"2026-01-10","budget":8000},{"id":1766576629223,"title":"Création de Site","desc":"pas d'idée","img":"https://picsum.photos/500/300?random=0.21969378452390642","dueDate":"2026-01-02","budget":4500}],"tasks":[{"id":1766602591956,"projectId":"1766600359053","name":"pjih","assigned":"Alice","date":"2026-01-01","priority":"Basse","priorityVal":1,"status":"Fait"},{"id":1766602387394,"projectId":"1766600359053","name":"iûpyheqgouyi","assigned":"Thomas","date":"2026-01-04","priority":"Haute","priorityVal":3,"status":"Fait"},{"id":1766602361416,"projectId":"1766600359053","name":"Refonte UI","assigned":"Julie","date":"2026-01-04","priority":"Basse","priorityVal":1,"status":"Attente"},{"id":1766600222473,"projectId":"1766577993456","name":"PAPA NOEL","assigned":"Thomas","date":"2026-01-01","priority":"Urgent","priorityVal":4,"status":"En cours"},{"id":1766576679800,"projectId":"1766576629223","name":"terminer","assigned":"Alice","date":"2026-01-01","priority":"Basse","priorityVal":1,"status":"Attente"},{"id":1766578009037,"projectId":"1766577993456","name":"Refonte UI","assigned":"Alice","date":"2026-01-03","priority":"Basse","priorityVal":1,"status":"En cours"},{"id":1766577948187,"projectId":"1766576629223","name":"Refonte UI","assigned":"Julie","date":"2025-12-26","priority":"Basse","priorityVal":1,"status":"Fait"},{"id":1766576657238,"projectId":"1766576629223","name":"Refonte UI","assigned":"Alice","date":"2025-12-31","priority":"Moyenne","priorityVal":2,"status":"En cours"},{"id":1766578145000,"projectId":"1766577993456","name":"Refonte UI","assigned":"Thomas","date":"2026-08-25","priority":"Urgent","priorityVal":4,"status":"En cours"}]}
+{
+  "projects": [
+    {
+      "id": 1766600359053,
+      "title": "VOYAGE AU KENTUCKY",
+      "desc": "VOYAGE DE FIN D'ANNEE",
+      "img": "https://picsum.photos/500/300?random=0.8700545403561317",
+      "dueDate": "2026-06-29",
+      "budget": 17000
+    },
+    {
+      "id": 1766577993456,
+      "title": "iouyugiyfutdfygiuhoij",
+      "desc": "poijohu",
+      "img": "https://picsum.photos/500/300?random=0.18482931929643887",
+      "dueDate": "2025-12-28",
+      "budget": 4500
+    },
+    {
+      "id": 1766577975933,
+      "title": "$ôpîopiofy",
+      "desc": "^p^loigh",
+      "img": "https://picsum.photos/500/300?random=0.2196234886448526",
+      "dueDate": "2026-01-10",
+      "budget": 8000
+    },
+    {
+      "id": 1766576629223,
+      "title": "Création de Site",
+      "desc": "pas d'idée",
+      "img": "https://picsum.photos/500/300?random=0.21969378452390642",
+      "dueDate": "2026-01-02",
+      "budget": 4500
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1766602591956,
+      "projectId": "1766600359053",
+      "name": "pjih",
+      "assigned": "Alice",
+      "date": "2026-01-01",
+      "priority": "Basse",
+      "priorityVal": 1,
+      "status": "Fait"
+    },
+    {
+      "id": 1766602387394,
+      "projectId": "1766600359053",
+      "name": "iûpyheqgouyi",
+      "assigned": "Thomas",
+      "date": "2026-01-04",
+      "priority": "Haute",
+      "priorityVal": 3,
+      "status": "Fait"
+    },
+    {
+      "id": 1766602361416,
+      "projectId": "1766600359053",
+      "name": "Refonte UI",
+      "assigned": "Julie",
+      "date": "2026-01-04",
+      "priority": "Basse",
+      "priorityVal": 1,
+      "status": "Attente"
+    },
+    {
+      "id": 1766600222473,
+      "projectId": "1766577993456",
+      "name": "PAPA NOEL",
+      "assigned": "Thomas",
+      "date": "2026-01-01",
+      "priority": "Urgent",
+      "priorityVal": 4,
+      "status": "En cours"
+    },
+    {
+      "id": 1766576679800,
+      "projectId": "1766576629223",
+      "name": "terminer",
+      "assigned": "Alice",
+      "date": "2026-01-01",
+      "priority": "Basse",
+      "priorityVal": 1,
+      "status": "Attente"
+    },
+    {
+      "id": 1766578009037,
+      "projectId": "1766577993456",
+      "name": "Refonte UI",
+      "assigned": "Alice",
+      "date": "2026-01-03",
+      "priority": "Basse",
+      "priorityVal": 1,
+      "status": "En cours"
+    },
+    {
+      "id": 1766577948187,
+      "projectId": "1766576629223",
+      "name": "Refonte UI",
+      "assigned": "Julie",
+      "date": "2025-12-26",
+      "priority": "Basse",
+      "priorityVal": 1,
+      "status": "Fait"
+    },
+    {
+      "id": 1766576657238,
+      "projectId": "1766576629223",
+      "name": "Refonte UI",
+      "assigned": "Alice",
+      "date": "2025-12-31",
+      "priority": "Moyenne",
+      "priorityVal": 2,
+      "status": "En cours"
+    },
+    {
+      "id": 1766578145000,
+      "projectId": "1766577993456",
+      "name": "Refonte UI",
+      "assigned": "Thomas",
+      "date": "2026-08-25",
+      "priority": "Urgent",
+      "priorityVal": 4,
+      "status": "En cours"
+    }
+  ]
+}

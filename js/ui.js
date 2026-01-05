@@ -1,4 +1,3 @@
-// js/ui.js
 import { formatDate } from "./utils.js";
 
 // --- GESTION DES GRAPHIQUES ---
@@ -40,7 +39,6 @@ export function updateStats(projects, tasks) {
 }
 
 function updateCharts(tasks) {
-  // Doughnut Chart
   const stats = { "En cours": 0, Attente: 0, Fait: 0 };
   tasks.forEach((t) => {
     if (stats[t.status] !== undefined) stats[t.status]++;
