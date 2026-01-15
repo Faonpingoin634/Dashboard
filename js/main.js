@@ -26,18 +26,29 @@ async function loadData() {
     state.tasks = data.tasks || [];
     refreshUI();
   } catch (e) {
-    Utils.showToast("Erreur de chargement (Mode hors ligne)", "danger");
+    Swal.fire({
+      title: 'Mode Hors Ligne',
+      text: 'Impossible de joindre le serveur. Lancement du mode démonstration.',
+      icon: 'warning',
+      confirmButtonText: 'Charger la démo',
+      confirmButtonColor: '#c5a059',
+      background: '#1a1a1a',        
+      color: '#fff',                 
+      backdrop: `rgba(0,0,0,0.8)`    
+    });
+
     state.projects = [
       {
         id: 1,
         title: "Projet démo",
-        desc: "Local",
+        desc: "Données locales (Serveur injoignable)",
         budget: 0,
         dueDate: "2024-12-31",
         img: "https://picsum.photos/500/300",
       },
     ];
     refreshUI();
+    
   } finally {
     UI.toggleLoading(false);
   }
@@ -47,7 +58,18 @@ async function syncData() {
   try {
     await API.saveDataToServer(state.projects, state.tasks);
   } catch (e) {
-    Utils.showToast("Erreur de sauvegarde", "danger");
+    Swal.fire({
+      title: 'Erreur critique !',
+      text: e.message, 
+      icon: 'error',
+      confirmButtonText: 'Compris',
+      confirmButtonColor: '#d33', 
+      backdrop: `
+        rgba(0,0,0,0.8)
+      `,
+      background: '#1a1a1a', 
+      color: '#fff' 
+    });
   }
 }
 

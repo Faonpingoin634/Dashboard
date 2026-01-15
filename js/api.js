@@ -20,11 +20,28 @@ export async function saveDataToServer(projects, tasks) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ projects, tasks }),
         });
-        if (!response.ok) throw new Error("Erreur écriture");
+
+        // Cas 1 : Le serveur a répondu, mais avec une erreur (ex: 500 ou 400)
+        if (!response.ok) {
+            try {
+                const errorData = await response.json();
+                throw new Error(errorData.message || `Erreur serveur (${response.status})`);
+            } catch (jsonError) {
+                throw new Error(`Erreur HTTP: ${response.status}`);
+            }
+        }
+
         return await response.json();
+
     } catch (error) {
-        console.error("Erreur Save:", error);
-        throw error;
+        // Cas 2 : Problème technique (Réseau coupé, DNS)
+        if (error.message.includes("Erreur serveur") || error.message.includes("Erreur HTTP")) {
+            console.error("Erreur API:", error);
+            throw error; 
+        }
+
+        console.error("Erreur Réseau:", error);
+        throw new Error("Connexion perdue. Vérifiez votre internet.");
     }
 }
 

@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "id": 1768467378192,
+      "title": "louka",
+      "desc": "yo !!!!!",
+      "img": "https://picsum.photos/500/300?random=0.3148437150387189",
+      "dueDate": "2026-01-17",
+      "budget": 2000
+    },
+    {
+      "id": 1768464673886,
+      "title": "Refonte de site",
+      "desc": "Faire le site",
+      "img": "https://picsum.photos/500/300?random=0.49851548330408857",
+      "dueDate": "2026-01-30",
+      "budget": 3000
+    },
+    {
       "id": 1766600359053,
       "title": "VOYAGE AU KENTUCKY",
       "desc": "VOYAGE DE FIN D'ANNEE",
@@ -10,16 +26,16 @@
     },
     {
       "id": 1766577993456,
-      "title": "iouyugiyfutdfygiuhoij",
-      "desc": "poijohu",
+      "title": "Crée un shopify",
+      "desc": "Faire le site",
       "img": "https://picsum.photos/500/300?random=0.18482931929643887",
       "dueDate": "2025-12-28",
       "budget": 4500
     },
     {
       "id": 1766577975933,
-      "title": "$ôpîopiofy",
-      "desc": "^p^loigh",
+      "title": "Wordpress",
+      "desc": "refonte des pages",
       "img": "https://picsum.photos/500/300?random=0.2196234886448526",
       "dueDate": "2026-01-10",
       "budget": 8000
@@ -37,7 +53,7 @@
     {
       "id": 1766602591956,
       "projectId": "1766600359053",
-      "name": "pjih",
+      "name": "Prévoir le trajet",
       "assigned": "Alice",
       "date": "2026-01-01",
       "priority": "Basse",
@@ -62,7 +78,7 @@
       "date": "2026-01-04",
       "priority": "Basse",
       "priorityVal": 1,
-      "status": "Attente"
+      "status": "Fait"
     },
     {
       "id": 1766600222473,
