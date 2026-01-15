@@ -1,14 +1,11 @@
 <?php
 
-ini_set('session.save_handler', 'files');
-ini_set('session.save_path', '/tmp');
-session_start();
-
-if (!isset($_SESSION['user'])) {
+if (!isset($_COOKIE['auth_token'])) {
     header('Location: login.php');
     exit;
 }
 
+$userName = $_COOKIE['user_name'] ?? 'Admin';
 ?>
 
 <!DOCTYPE html>

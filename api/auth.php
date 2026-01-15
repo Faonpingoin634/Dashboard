@@ -1,11 +1,8 @@
 <?php
 
-ini_set('session.save_handler', 'files');
-ini_set('session.save_path', '/tmp');
-session_start();
-
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
-    session_destroy();
+    setcookie('auth_token', '', time() - 3600, '/');
+    setcookie('user_name', '', time() - 3600, '/');
     header('Location: login.php');
     exit;
 }
@@ -15,11 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
 
     if ($email === 'admin@elite.com' && $password === 'admin') {
-        $_SESSION['user'] = [
-            'name' => 'Admin Elite',
-            'email' => $email,
-            'role' => 'Manager'
-        ];
+        setcookie('auth_token', md5($email), time() + 7200, '/');
+        setcookie('user_name', 'Admin Elite', time() + 7200, '/');
+        
         header('Location: dashboard.php');
         exit;
     } else {
