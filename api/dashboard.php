@@ -272,7 +272,7 @@ $userName = $_COOKIE['user_name'] ?? 'Admin';
             <div class="row g-3 g-xl-4">
               <div class="col-12 col-sm-6 col-xl-4 text-center">
                 <div class="card border-0 shadow-sm p-4 h-100 stat-card">
-                  <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['user']['name']; ?>&background=c5a059&color=fff" />
+                  <img src="https://ui-avatars.com/api/?name=Alice&background=c5a059&color=fff" class="rounded-circle mb-3 mx-auto" width="80" />
                   <h5 class="fw-bold mb-1">Alice</h5>
                   <p class="text-muted small">Lead Designer</p>
                 </div>
