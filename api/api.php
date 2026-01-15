@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-$jsonFile = 'data.json';
+$jsonFile = __DIR__ . '/data.json';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (file_exists($jsonFile)) {

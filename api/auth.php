@@ -1,5 +1,7 @@
 <?php
 
+ini_set('session.save_handler', 'files');
+ini_set('session.save_path', '/tmp');
 session_start();
 
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
