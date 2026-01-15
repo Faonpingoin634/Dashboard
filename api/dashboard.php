@@ -53,7 +53,7 @@ $userName = $_COOKIE['user_name'] ?? 'Admin';
 
             <div class="dropdown">
               <a href="#" class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown">
-                <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['user']['name']; ?>&background=c5a059&color=fff" />
+                <img src="https://ui-avatars.com/api/?name=<?php echo $userName; ?>&background=c5a059&color=fff" alt="user" width="35" class="rounded-circle border border-1 border-premium"/>
               </a>
               <ul class="dropdown-menu dropdown-menu-end shadow border-0 position-absolute">
                 <li><h6 class="dropdown-header">Bonjour, <?php echo $userName; ?></h6></li>
@@ -272,7 +272,7 @@ $userName = $_COOKIE['user_name'] ?? 'Admin';
             <div class="row g-3 g-xl-4">
               <div class="col-12 col-sm-6 col-xl-4 text-center">
                 <div class="card border-0 shadow-sm p-4 h-100 stat-card">
-                  <img src="https://ui-avatars.com/api/?name=<?php echo $userName; ?>&background=c5a059&color=fff" alt="user" width="35" class="rounded-circle border border-1 border-premium"/>
+                  <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['user']['name']; ?>&background=c5a059&color=fff" />
                   <h5 class="fw-bold mb-1">Alice</h5>
                   <p class="text-muted small">Lead Designer</p>
                 </div>
